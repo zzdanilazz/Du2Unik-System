@@ -1,0 +1,224 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 234881024 bytes for G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Zero Based Compressed Oops mode in which the Java heap is
+#     placed in the first 32GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 32GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3527), pid=14700, tid=8244
+#
+# JRE version:  (19.0.1+10) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (19.0.1+10-21, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2023.1.1\lib\idea_rt.jar=59334:C:\Program Files\JetBrains\IntelliJ IDEA 2023.1.1\bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 org.example.Main
+
+Host: AMD Ryzen 5 3550H with Radeon Vega Mobile Gfx  , 8 cores, 13G,  Windows 10 , 64 bit Build 19041 (10.0.19041.1889)
+Time: Sun May 21 23:35:30 2023 RTZ 2 (s 10 , 64 bit Build 19041 (10.0.19041.1889) elapsed time: 0.015185 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000002a47291d850):  JavaThread "Unknown thread" [_thread_in_vm, id=8244, stack(0x000000b26dc00000,0x000000b26dd00000)]
+
+Stack: [0x000000b26dc00000,0x000000b26dd00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x6ee8fa]
+V  [jvm.dll+0x857a1e]
+V  [jvm.dll+0x85940e]
+V  [jvm.dll+0x859ac3]
+V  [jvm.dll+0x28291f]
+V  [jvm.dll+0x6eb6e9]
+V  [jvm.dll+0x6e028a]
+V  [jvm.dll+0x357136]
+V  [jvm.dll+0x35eb96]
+V  [jvm.dll+0x3b555e]
+V  [jvm.dll+0x3b578f]
+V  [jvm.dll+0x32c6ea]
+V  [jvm.dll+0x32d59e]
+V  [jvm.dll+0x821b20]
+V  [jvm.dll+0x3c27c1]
+V  [jvm.dll+0x8022f1]
+V  [jvm.dll+0x44b30f]
+V  [jvm.dll+0x44cc91]
+C  [jli.dll+0x5287]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17034]
+C  [ntdll.dll+0x526a1]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ff872f2d048, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000002a472983950 WorkerThread "GC Thread#0" [stack: 0x000000b26dd00000,0x000000b26de00000] [id=15036]
+  0x000002a472992860 ConcurrentGCThread "G1 Main Marker" [stack: 0x000000b26de00000,0x000000b26df00000] [id=9048]
+  0x000002a472993a30 WorkerThread "G1 Conc#0" [stack: 0x000000b26df00000,0x000000b26e000000] [id=14328]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff8726ed127]
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000002a4729167e0] Heap_lock - owner thread: 0x000002a47291d850
+
+Heap address: 0x0000000721e00000, size: 3554 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 0.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+ CardTable entry size: 512
+ Card Set container configuration: InlinePtr #cards 4 size 8 Array Of Cards #cards 16 size 48 Howl #buckets 8 coarsen threshold 3686 Howl Bitmap #cards 512 size 80 coarsen threshold 460 Card regions per heap region 1 cards per card region 4096
+
+Heap:
+ garbage-first heap   total 0K, used 0K [0x0000000721e00000, 0x0000000800000000)
+  region size 2048K, 0 young (0K), 0 survivors (0K)
+
+[error occurred during error reporting (printing heap information), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff872af6959]
+
+GC Heap History (0 events):
+No events
+
+Dll operation events (1 events):
+Event: 0.009 Loaded shared library C:\Program Files\Java\jdk-19\bin\java.dll
+
+Deoptimization events (0 events):
+No events
+
+Classes loaded (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff78a330000 - 0x00007ff78a340000 	C:\Program Files\Java\jdk-19\bin\java.exe
+0x00007ff8e0170000 - 0x00007ff8e0368000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ff8df770000 - 0x00007ff8df82d000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ff8ddca0000 - 0x00007ff8ddf72000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ff8dd930000 - 0x00007ff8dda30000 	C:\Windows\System32\ucrtbase.dll
+0x00007ff8b7370000 - 0x00007ff8b7388000 	C:\Program Files\Java\jdk-19\bin\jli.dll
+0x00007ff8b52f0000 - 0x00007ff8b530b000 	C:\Program Files\Java\jdk-19\bin\VCRUNTIME140.dll
+0x00007ff8deef0000 - 0x00007ff8def9e000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ff8dee50000 - 0x00007ff8deeee000 	C:\Windows\System32\msvcrt.dll
+0x00007ff8df8f0000 - 0x00007ff8df98c000 	C:\Windows\System32\sechost.dll
+0x00007ff8dfff0000 - 0x00007ff8e0115000 	C:\Windows\System32\RPCRT4.dll
+0x00007ff8df270000 - 0x00007ff8df40d000 	C:\Windows\System32\USER32.dll
+0x00007ff8c4fb0000 - 0x00007ff8c524a000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ff8de170000 - 0x00007ff8de192000 	C:\Windows\System32\win32u.dll
+0x00007ff8df010000 - 0x00007ff8df03b000 	C:\Windows\System32\GDI32.dll
+0x00007ff8de060000 - 0x00007ff8de16f000 	C:\Windows\System32\gdi32full.dll
+0x00007ff8ddaa0000 - 0x00007ff8ddb3d000 	C:\Windows\System32\msvcp_win.dll
+0x00007ff8d52c0000 - 0x00007ff8d52ca000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ff8de920000 - 0x00007ff8de950000 	C:\Windows\System32\IMM32.DLL
+0x00007ff8c0200000 - 0x00007ff8c020c000 	C:\Program Files\Java\jdk-19\bin\vcruntime140_1.dll
+0x00007ff887880000 - 0x00007ff88790e000 	C:\Program Files\Java\jdk-19\bin\msvcp140.dll
+0x00007ff8723b0000 - 0x00007ff873070000 	C:\Program Files\Java\jdk-19\bin\server\jvm.dll
+0x00007ff8be880000 - 0x00007ff8be889000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ff8d0880000 - 0x00007ff8d08a7000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ff8df1e0000 - 0x00007ff8df24b000 	C:\Windows\System32\WS2_32.dll
+0x00007ff8db740000 - 0x00007ff8db752000 	C:\Windows\SYSTEM32\kernel.appcore.dll
+0x00007ff8bed00000 - 0x00007ff8bed0a000 	C:\Program Files\Java\jdk-19\bin\jimage.dll
+0x00007ff8c6da0000 - 0x00007ff8c6f84000 	C:\Windows\SYSTEM32\DBGHELP.DLL
+0x00007ff8bd320000 - 0x00007ff8bd34c000 	C:\Windows\SYSTEM32\dbgcore.DLL
+0x00007ff8ddf80000 - 0x00007ff8de002000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ff8ab040000 - 0x00007ff8ab04e000 	C:\Program Files\Java\jdk-19\bin\instrument.dll
+0x00007ff8a93e0000 - 0x00007ff8a9406000 	C:\Program Files\Java\jdk-19\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-19\bin;C:\Windows\SYSTEM32;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e;C:\Program Files\Java\jdk-19\bin\server
+
+VM Arguments:
+jvm_args: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2023.1.1\lib\idea_rt.jar=59334:C:\Program Files\JetBrains\IntelliJ IDEA 2023.1.1\bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 
+java_command: org.example.Main
+java_class_path (initial): C:\Users\User\IdeaProjects\Du2UnikBot\target\classes;C:\Users\User\.m2\repository\org\telegram\telegrambots\6.5.0\telegrambots-6.5.0.jar;C:\Users\User\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.14.0\jackson-annotations-2.14.0.jar;C:\Users\User\.m2\repository\com\fasterxml\jackson\jaxrs\jackson-jaxrs-json-provider\2.14.0\jackson-jaxrs-json-provider-2.14.0.jar;C:\Users\User\.m2\repository\com\fasterxml\jackson\jaxrs\jackson-jaxrs-base\2.14.0\jackson-jaxrs-base-2.14.0.jar;C:\Users\User\.m2\repository\com\fasterxml\jackson\module\jackson-module-jaxb-annotations\2.14.0\jackson-module-jaxb-annotations-2.14.0.jar;C:\Users\User\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;C:\Users\User\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.14.0\jackson-databind-2.14.0.jar;C:\Users\User\.m2\repository\org\glassfish\jersey\inject\jersey-hk2\2.35\jersey-hk2-2.35.jar;C:\Users\User\.m2\repository\org\glassfish\jersey\core\jersey-common\2.35\jersey-common-2.35.jar;C:\Users\User\.m2\repository\org\glassfish\hk2\osgi-resource-locator\1.0.3\osgi-resource-locator-1.0.3.jar;C:\Users\User\.m2\repository\org\glassfish\hk2\hk2-locator\2.6.1\hk2-locator-2.6.1.jar;C:\Users\User\.m2\repository\org\glassfish\hk2\external\aopalliance-repackaged\2.6.1\aopalliance-repackaged-2.6.1.jar;C:\Users\User\.m2\repository\org\glassfish\hk2\hk2-api\2.6.1\hk2-api-2.6.1.jar;C:\Users\User\.m2\repository\org\glassfish\hk2\hk2-utils\2.6.1\hk2-utils-2.6.1.jar;C:\Users\User\.m2\repository\org\javassist\javassist\3.25.0-GA\javassist-3.25.0-GA.jar;C:\Users\User\.m2\repository\org\glassfish\jersey\media\jersey-media-json-jackson\2.35\jersey-media-json-jackson-2.35.jar;C:\Users\User\.m2\repository\org\glassfish\jersey\ext\jersey-entity-filtering\2.35\jersey-entity-filtering-2.35.jar;C:\Users\User\.m2\repository\org\glassfish\jersey\containers\jersey-container-grizzly2-http\2.35\jersey-container-grizzly2-http-2.35.jar;C:\Users\User\.m2\repository\org\glassfish\hk2\external\jakarta.inject\2.6.1\jakarta.inject-2.6.1.jar;C:\Users\User\.m2\repository\org\glassfish\grizzly\grizzly-http-server\2.4.4\grizzly-http-server-2.4.4.jar;C:\Users\User\.m2\repository\org\glassfish\grizzly\grizzly-http\2.4.4\grizzly-http-2.4.4.jar;C:\Users\User\.m2\repository\org\glassfish\grizzly\grizzly-framework\2.4.4\grizzly-framework-2.4.4.jar;C:\Users\User\.m2\repository\jakarta\ws\rs\jakarta.ws.rs-api\2.1.6\jakarta.ws.rs-api-2.1.6.jar;C:\Users\User\.m2\repository\org\glassfish\jersey\core\jersey-server\2.35\jersey-server-2.35.jar;C:\Users\User\.m2\repository\org\glassfish\jersey\core\jersey-client\2.35\jersey-client-2.35.jar;C:\Users\User\.m2\repository\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar;C:\Users\User\.m2\repository\jakarta\validation\jakarta.validation-api\2.0.2\jakarta.validation-api-2.0.2.jar;C:\Users\User\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\User\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\User\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\User\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\User\.m2\repository\commons-io\commons-io\2.11.0\commons-io-2.11.0.jar;C:\Users\User\.m2\repository\org\slf4j\slf4j-api\2.0.3\slf4j-api-2.0.3.jar;C:\Users\User\.m2\repository\org\telegram\telegrambots-meta\6.5.0\telegrambots-meta-6.5.0.jar;C:\Users\User\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Users\User\.m2\repository\org\apache\cassandra\cassandra-all\4.0.8\cassandra-all-4.0.8.jar;C:\Users\User\.m2\repository\org\xerial\snappy\snappy-java\1.1.2.6\snappy-java-1.1.2.6.jar;C:\Users\User\.m2\repository\org\lz4\lz4-java\1.8.0\lz4-java-1.8.0.jar;C:\Users\User\.m2\repository\com\google\guava\guava\27.0-jre\guava-27.0-jre.jar;C:\Users\User\.m2\repository\commons-cli\commons-cli\1.1\commons-cli-1.1.jar;C:\Users\User\.m2\repository\commons-codec\commons-codec\1.9\commons-codec-1.9.jar;C:\Users\User\.m2\repository\org\apache\commons\commons-math3\3.2\commons-math3-3.2.jar;C:\Users\User\.m2\repository\org\antlr\ST4\4.0.8\ST4-4.0.8.jar;C:\Users\User\.m2\repository\org\antlr\antlr-runtime\3.5.2\antlr-runtime-3.5.2.jar;C:\Users\User\.m2\repository\org\slf4j\log4j-over-slf4j\1.7.25\log4j-over-slf4j-1.7.25.jar;C:\Users\User\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.25\jcl-over-slf4j-1.7.25.jar;C:\Users\User\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.13.2\jackson-core-2.13.2.jar;C:\Users\User\.m2\repository\com\googlecode\json-simple\json-simple\1.1\json-simple-1.1.jar;C:\Users\User\.m2\repository\com\boundary\high-scale-lib\1.0.6\high-scale-lib-1.0.6.jar;C:\Users\User\.m2\repository\org\yaml\snakeyaml\1.26\snakeyaml-1.26.jar;C:\Users\User\.m2\repository\org\mindrot\jbcrypt\0.4\jbcrypt-0.4.jar;C:\Users\User\.m2\repository\io\airlift\airline\0.8\airline-0.8.jar;C:\Users\User\.m2\repository\io\dropwizard\metrics\metrics-core\3.1.5\metrics-core-3.1.5.jar;C:\Users\User\.m2\repository\io\dropwizard\metrics\metrics-jvm\3.1.5\metrics-jvm-3.1.5.jar;C:\Users\User\.m2\repository\io\dropwizard\metrics\metrics-logback\3.1.5\metrics-logback-3.1.5.jar;C:\Users\User\.m2\repository\com\addthis\metrics\reporter-config3\3.0.3\reporter-config3-3.0.3.jar;C:\Users\User\.m2\repository\com\addthis\metrics\reporter-config-base\3.0.3\reporter-config-base-3.0.3.jar;C:\Users\User\.m2\repository\com\clearspring\analytics\stream\2.5.2\stream-2.5.2.jar;C:\Users\User\.m2\repository\ch\qos\logback\logback-core\1.2.9\logback-core-1.2.9.jar;C:\Users\User\.m2\repository\ch\qos\logback\logback-classic\1.2.9\logback-classic-1.2.9.jar;C:\Users\User\.m2\repository\net\java\dev\jna\jna\5.6.0\jna-5.6.0.jar;C:\Users\User\.m2\repository\com\github\jbellis\jamm\0.3.2\jamm-0.3.2.jar;C:\Users\User\.m2\repository\io\netty\netty-all\4.1.58.Final\netty-all-4.1.58.Final.jar;C:\Users\User\.m2\repository\net\openhft\chronicle-queue\5.20.123\chronicle-queue-5.20.123.jar;C:\Users\User\.m2\repository\net\openhft\chronicle-core\2.20.126\chronicle-core-2.20.126.jar;C:\Users\User\.m2\repository\net\openhft\chronicle-bytes\2.20.111\chronicle-bytes-2.20.111.jar;C:\Users\User\.m2\repository\net\openhft\chronicle-wire\2.20.117\chronicle-wire-2.20.117.jar;C:\Users\User\.m2\repository\net\openhft\chronicle-threads\2.20.111\chronicle-threads-2.20.111.jar;C:\Users\User\.m2\repository\org\fusesource\sigar\1.6.4\sigar-1.6.4.jar;C:\Users\User\.m2\repository\org\eclipse\jdt\core\compiler\ecj\4.6.1\ecj-4.6.1.jar;C:\Users\User\.m2\repository\org\caffinitas\ohc\ohc-core\0.5.1\ohc-core-0.5.1.jar;C:\Users\User\.m2\repository\org\caffinitas\ohc\ohc-core-j8\0.5.1\ohc-core-j8-0.5.1.jar;C:\Users\User\.m2\repository\com\github\ben-manes\caffeine\caffeine\2.5.6\caffeine-2.5.6.jar;C:\Users\User\.m2\repository\org\jctools\jctools-core\3.1.0\jctools-core-3.1.0.jar;C:\Users\User\.m2\repository\org\ow2\asm\asm\7.1\asm-7.1.jar;C:\Users\User\.m2\repository\com\carrotsearch\hppc\0.8.1\hppc-0.8.1.jar;C:\Users\User\.m2\repository\org\gridkit\jvmtool\sjk-cli\0.14\sjk-cli-0.14.jar;C:\Users\User\.m2\repository\org\gridkit\jvmtool\sjk-core\0.14\sjk-core-0.14.jar;C:\Users\User\.m2\repository\org\gridkit\jvmtool\sjk-stacktrace\0.14\sjk-stacktrace-0.14.jar;C:\Users\User\.m2\repository\org\gridkit\jvmtool\mxdump\0.14\mxdump-0.14.jar;C:\Users\User\.m2\repository\org\gridkit\lab\jvm-attach-api\1.5\jvm-attach-api-1.5.jar;C:\Users\User\.m2\repository\com\beust\jcommander\1.30\jcommander-1.30.jar;C:\Users\User\.m2\repository\org\gridkit\jvmtool\sjk-json\0.14\sjk-json-0.14.jar;C:\Users\User\.m2\repository\com\github\luben\zstd-jni\1.5.0-4\zstd-jni-1.5.0-4.jar;C:\Users\User\.m2\repository\org\psjava\psjava\0.1.19\psjava-0.1.19.jar;C:\Users\User\.m2\repository\io\netty\netty-tcnative-boringssl-static\2.0.36.Final\netty-tcnative-boringssl-static-2.0.36.Final.jar;C:\Users\User\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar;C:\Users\User\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar;C:\Users\User\.m2\repository\org\hdrhistogram\HdrHistogram\2.1.9\HdrHistogram-2.1.9.jar;C:\Users\User\.m2\repository\de\jflex\jflex\1.8.2\jflex-1.8.2.jar;C:\Users\User\.m2\repository\com\github\vbmacher\java-cup-runtime\11b-20160615\java-cup-runtime-11b-20160615.jar;C:\Users\User\.m2\repository\com\github\rholder\snowball-stemmer\1.3.0.581.1\snowball-stemmer-1.3.0.581.1.jar;C:\Users\User\.m2\repository\com\googlecode\concurrent-trees\concurrent-trees\2.4.0\concurrent-trees-2.4.0.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 2097152                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 234881024                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 3726639104                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 2097152                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5839372                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122909434                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122909434                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 3726639104                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Environment Variables:
+CLASSPATH=C:\Linter\jdbc\linjdbc-1.4.jar
+PATH=C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files\Meld\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\User\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\User\AppData\Local\Programs\Python\Python310\;C:\Users\User\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\PyCharm Community Edition 2022.2\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.1\bin;;C:\Program Files\JetBrains\IntelliJ IDEA 2023.1.1\bin;;C:\php;
+USERNAME=User
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 23 Model 24 Stepping 1, AuthenticAMD
+TMP=C:\Users\User\AppData\Local\Temp
+TEMP=C:\Users\User\AppData\Local\Temp
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 10 , 64 bit Build 19041 (10.0.19041.1889)
+OS uptime: 1 days 9:00 hours
+
+CPU: total 8 (initial active 8) (8 cores per cpu, 2 threads per core) family 23 model 24 stepping 1 microcode 0x0, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4a, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, clmul, bmi1, bmi2, adx, sha, fma, vzeroupper, clflush, clflushopt, rdtscp
+
+Memory: 4k page, system-wide physical 14213M (1640M free)
+TotalPageFile size 18281M (AvailPageFile size 139M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 60M, peak: 284M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (19.0.1+10-21) for windows-amd64 JRE (19.0.1+10-21), built on 2022-09-14T12:45:06Z by "mach5one" with MS VC++ 17.1 (VS2022)
+
+END.
