@@ -1,0 +1,60 @@
+2024-05-10 01:15:17.998  INFO 12892 --- [main] org.du2unikbot.Du2UnikApplication        : Starting Du2UnikApplication using Java 19.0.1 on DESKTOP-N4IHKI9 with PID 12892 (C:\Users\User\IdeaProjects\Du2UnikBot\target\classes started by User in C:\Users\User\IdeaProjects\Du2UnikBot)
+2024-05-10 01:15:18.008  INFO 12892 --- [main] org.du2unikbot.Du2UnikApplication        : The following 1 profile is active: "dev"
+2024-05-10 01:15:18.882  INFO 12892 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-10 01:15:18.966  INFO 12892 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 2 JPA repository interfaces.
+2024-05-10 01:15:19.839  INFO 12892 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2024-05-10 01:15:19.852  INFO 12892 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-10 01:15:19.854  INFO 12892 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2024-05-10 01:15:20.003  INFO 12892 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-10 01:15:20.003  INFO 12892 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1909 ms
+2024-05-10 01:15:20.285  INFO 12892 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-10 01:15:20.387  INFO 12892 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.5.Final
+2024-05-10 01:15:20.742  INFO 12892 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-05-10 01:15:20.889  INFO 12892 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-05-10 01:15:21.269  INFO 12892 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-05-10 01:15:21.308  INFO 12892 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2024-05-10 01:15:22.438  INFO 12892 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-10 01:15:22.447  INFO 12892 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-10 01:15:22.477  WARN 12892 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bot' defined in file [C:\Users\User\IdeaProjects\Du2UnikBot\target\classes\org\du2unikbot\Bot.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.telegram.telegrambots.meta.TelegramBotsApi' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-05-10 01:15:22.477  INFO 12892 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-10 01:15:22.480  INFO 12892 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-05-10 01:15:22.487  INFO 12892 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-05-10 01:15:22.493  INFO 12892 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-05-10 01:15:22.509  INFO 12892 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-05-10 01:15:22.538 ERROR 12892 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in org.du2unikbot.Bot required a bean of type 'org.telegram.telegrambots.meta.TelegramBotsApi' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.telegram.telegrambots.meta.TelegramBotsApi' in your configuration.
+
+2024-05-10 01:21:50.746  INFO 9144 --- [main] org.du2unikbot.Du2UnikApplication        : Starting Du2UnikApplication using Java 19.0.1 on DESKTOP-N4IHKI9 with PID 9144 (C:\Users\User\IdeaProjects\Du2UnikBot\target\classes started by User in C:\Users\User\IdeaProjects\Du2UnikBot)
+2024-05-10 01:21:50.750  INFO 9144 --- [main] org.du2unikbot.Du2UnikApplication        : The following 1 profile is active: "dev"
+2024-05-10 01:21:51.554  INFO 9144 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-10 01:21:51.629  INFO 9144 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 2 JPA repository interfaces.
+2024-05-10 01:21:52.356  INFO 9144 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2024-05-10 01:21:52.370  INFO 9144 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-10 01:21:52.370  INFO 9144 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2024-05-10 01:21:52.501  INFO 9144 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-10 01:21:52.501  INFO 9144 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1669 ms
+2024-05-10 01:21:52.744  INFO 9144 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-10 01:21:52.811  INFO 9144 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.5.Final
+2024-05-10 01:21:53.015  INFO 9144 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-05-10 01:21:53.116  INFO 9144 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-05-10 01:21:53.430  INFO 9144 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-05-10 01:21:53.460  INFO 9144 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2024-05-10 01:21:54.456  INFO 9144 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-10 01:21:54.466  INFO 9144 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-10 01:21:55.269  WARN 9144 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-10 01:21:55.716  INFO 9144 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2024-05-10 01:21:56.239  INFO 9144 --- [main] org.du2unikbot.Du2UnikApplication        : Started Du2UnikApplication in 6.118 seconds (JVM running for 6.824)

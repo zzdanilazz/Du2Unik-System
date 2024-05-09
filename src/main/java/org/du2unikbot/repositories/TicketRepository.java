@@ -1,0 +1,17 @@
+package org.du2unikbot.repositories;
+
+import org.du2unikbot.entities.Ticket;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository
+public interface TicketRepository extends CrudRepository<Ticket, Integer> {
+    List<Ticket> findAll();
+    List<Ticket> findAllByUsers_Username(String username);
+    Ticket findById(int id);
+    // Содержится ли username в тикете
+    boolean existsByUsers_UsernameAndId(String username, Integer ticketId);
+    void deleteByUsers_Username(String username);
+}
