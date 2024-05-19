@@ -13,6 +13,15 @@ public class User {
     @Column
     private String username;
 
+    @Column(name = "chat_id")
+    private Long chatId;
+
+    @Column(name = "friends_count")
+    private Integer friendsCount;
+
+    @ManyToMany(fetch = FetchType.EAGER, mappedBy = "users")
+    private Set<Ticket> tickets;
+
     public String getUsername() {
         return username;
     }
@@ -29,8 +38,13 @@ public class User {
         return id;
     }
 
-    @ManyToMany(fetch = FetchType.EAGER, mappedBy = "users")
-    private Set<Ticket> tickets;
+    public Long getChatId() {
+        return chatId;
+    }
+
+    public void setChatId(Long chatId) {
+        this.chatId = chatId;
+    }
 
     public Set<Ticket> getTickets() {
         return tickets;
@@ -40,10 +54,22 @@ public class User {
         this.tickets = tickets;
     }
 
+    public Integer getFriendsCount() {
+        return friendsCount;
+    }
+
+    public void setFriendsCount(Integer friendsCount) {
+        if (friendsCount <= 2) {
+            this.friendsCount = friendsCount;
+        } else throw new IllegalArgumentException();
+    }
+
     public User() {}
 
-    public User(Long id, String username) {
+    public User(Long id, String username, Long chatId, Integer friendsCount) {
         this.id = id;
         this.username = username;
+        this.chatId = chatId;
+        this.friendsCount = friendsCount;
     }
 }

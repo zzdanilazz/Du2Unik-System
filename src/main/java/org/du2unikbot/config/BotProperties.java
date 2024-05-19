@@ -10,9 +10,6 @@ import org.springframework.stereotype.Component;
 @Data
 @PropertySource("classpath:application.properties")
 public class BotProperties {
-
     String name;
-
     String token;
-
 }

@@ -1,7 +1,6 @@
 package org.du2unikbot.config;
 
-import lombok.extern.slf4j.Slf4j;
-import org.du2unikbot.Du2UnikBot;
+import org.du2unikbot.web.bot.Du2UnikBot;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.context.event.EventListener;
@@ -11,9 +10,7 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 
 @Component
-@Slf4j
 public class BotInit {
-
     private final Du2UnikBot du2UnikBot;
 
     @Autowired
@@ -27,7 +24,7 @@ public class BotInit {
         try {
             telegramBotsApi.registerBot(du2UnikBot);
         } catch (TelegramApiException e) {
-            log.error(e.getMessage());
+            e.printStackTrace();
         }
     }
 }
