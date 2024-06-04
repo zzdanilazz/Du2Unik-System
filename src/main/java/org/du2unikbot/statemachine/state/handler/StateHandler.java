@@ -9,6 +9,14 @@ import org.telegram.telegrambots.meta.api.objects.CallbackQuery;
 import org.telegram.telegrambots.meta.api.objects.Message;
 
 public interface StateHandler {
-    void handleMessage(Du2UnikBot du2UnikBot, Message message, StateMachineFactory<BotState, BotEvent> stateMachineFactory, StateMachinePersister<BotState, BotEvent, Long> persister);
-    void handleCallbackQuery(Du2UnikBot du2UnikBot, CallbackQuery callbackQuery, StateMachineFactory<BotState, BotEvent> stateMachineFactory, StateMachinePersister<BotState, BotEvent, Long> persister);
+    void handleMessage(
+            Du2UnikBot du2UnikBot,
+            Message message,
+            StateMachineFactory<BotState, BotEvent> stateMachineFactory,
+            StateMachinePersister<BotState, BotEvent, Long> persister);
+    void handleCallbackQuery(
+            Du2UnikBot du2UnikBot,
+            CallbackQuery callbackQuery,
+            StateMachineFactory<BotState, BotEvent> stateMachineFactory,
+            StateMachinePersister<BotState, BotEvent, Long> persister);
 }

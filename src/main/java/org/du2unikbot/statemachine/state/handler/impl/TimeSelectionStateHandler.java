@@ -71,7 +71,6 @@ public class TimeSelectionStateHandler implements StateHandler {
 
         User currentUser = message.getFrom();
 
-
         // Допустимое время встречи
         if (isValidMeetingTime(currentUser, replyMessageText, errorMessage)) {
             // Сохранение времени встречи в ticket

@@ -21,5 +21,4 @@ public interface TicketRepository extends CrudRepository<Ticket, Integer> {
      Содержится ли username в заданном тикете
      */
     boolean existsByUsers_UsernameAndId(String username, Integer ticketId);
-    void deleteByUsers_Username(String username);
 }

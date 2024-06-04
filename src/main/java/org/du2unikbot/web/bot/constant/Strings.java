@@ -32,14 +32,14 @@ public class Strings {
                     "время встречи должно быть не менее чем через 10 минут от текущего момента.\n";
     public static final String ALL_TICKETS = "Все тикеты";
     public static final String CREATE_TICKET = "Создать тикет";
-    public static final String MY_TICKETS = "Мои тикеты";
+    public static final String MY_TICKETS = "Мой тикет";
     public static final String START_POINT_SELECTION_TITLE = "Укажите точку старта:";
     public static final String FINISH_POINT_SELECTION_TITLE = "Укажите точку финиша:";
     public static final String RESERVED_SEATS_SELECTION_TITLE = "Укажите количество забронированных мест:";
     public static final String MEETING_TIME_SELECTION_TITLE = "Укажите время (ЧЧ:ММ) ответом на это сообщение:";
     public static final String TICKET_CONFIRMATION_TITLE = "Подтвердить введенные данные?";
     public static final String THERE_IS_NO_TICKET = "Пока не создан ни один тикет!";
-    public static final String YOU_HAVE_NO_TICKET = "У вас нет тикетов!";
+    public static final String YOU_HAVE_NO_TICKET = "У вас нет активного тикета!";
     public static final String TICKET_ENROLLMENT = "Вы уже записаны в тикет с ID: %d!";
     public static final String TICKET_SELECTION_SUCCESS = "Вы успешно выбрали тикет с ID: %d";
     public static final String TICKET_DELETING_SUCCESS = "Ваш тикет с ID: %d успешно удален";

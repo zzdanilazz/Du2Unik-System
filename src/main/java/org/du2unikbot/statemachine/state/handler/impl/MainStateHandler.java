@@ -40,7 +40,11 @@ public class MainStateHandler implements StateHandler {
     private Du2UnikBot du2UnikBot;
 
     @Override
-    public void handleMessage(Du2UnikBot du2UnikBot, Message message, StateMachineFactory<BotState, BotEvent> stateMachineFactory, StateMachinePersister<BotState, BotEvent, Long> persister) {
+    public void handleMessage(
+            Du2UnikBot du2UnikBot,
+            Message message,
+            StateMachineFactory<BotState, BotEvent> stateMachineFactory,
+            StateMachinePersister<BotState, BotEvent, Long> persister) {
         this.du2UnikBot = du2UnikBot;
 
         final StateMachine<BotState, BotEvent> stateMachine = stateMachineFactory.getStateMachine();
@@ -54,7 +58,6 @@ public class MainStateHandler implements StateHandler {
 
         try {
             persister.restore(stateMachine, userId);
-
             switch (messageText) {
                 case MY_TICKETS -> showTickets(false, userName, chatId);
                 case ALL_TICKETS -> showTickets(true, userName, chatId);
@@ -66,7 +69,6 @@ public class MainStateHandler implements StateHandler {
                     }
 
                 }
-
                 default -> throw new IllegalStateException("Unexpected value: " + messageText);
             }
 
@@ -74,7 +76,6 @@ public class MainStateHandler implements StateHandler {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 
     @Override

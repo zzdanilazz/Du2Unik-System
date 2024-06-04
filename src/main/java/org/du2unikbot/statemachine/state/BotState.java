@@ -27,12 +27,21 @@ public enum BotState implements StateHandler {
     }
 
     @Override
-    public void handleMessage(Du2UnikBot du2UnikBot, Message message, StateMachineFactory<BotState, BotEvent> stateMachineFactory, StateMachinePersister<BotState, BotEvent, Long> persister) {
+    public void handleMessage(
+            Du2UnikBot du2UnikBot,
+            Message message,
+            StateMachineFactory<BotState, BotEvent> stateMachineFactory,
+            StateMachinePersister<BotState, BotEvent, Long> persister) {
         handler.handleMessage(du2UnikBot, message, stateMachineFactory, persister);
     }
 
     @Override
-    public void handleCallbackQuery(Du2UnikBot du2UnikBot, CallbackQuery callbackQuery, StateMachineFactory<BotState, BotEvent> stateMachineFactory, StateMachinePersister<BotState, BotEvent, Long> persister) {
+    public void handleCallbackQuery(
+            Du2UnikBot du2UnikBot,
+            CallbackQuery callbackQuery,
+            StateMachineFactory<BotState, BotEvent> stateMachineFactory,
+            StateMachinePersister<BotState, BotEvent, Long> persister) {
         handler.handleCallbackQuery(du2UnikBot, callbackQuery, stateMachineFactory, persister);
     }
 }
+

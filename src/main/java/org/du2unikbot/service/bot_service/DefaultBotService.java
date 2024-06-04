@@ -1,4 +1,4 @@
-package org.du2unikbot.service;
+package org.du2unikbot.service.bot_service;
 
 import org.du2unikbot.statemachine.event.BotEvent;
 import org.du2unikbot.statemachine.state.BotState;
@@ -15,8 +15,7 @@ public class DefaultBotService implements BotService {
 
     private final StateMachineFactory<BotState, BotEvent> stateMachineFactory;
 
-    public DefaultBotService(
-            StateMachinePersister<BotState, BotEvent, Long> persister,
+    public DefaultBotService(StateMachinePersister<BotState, BotEvent, Long> persister,
             StateMachineFactory<BotState, BotEvent> stateMachineFactory) {
         this.persister = persister;
         this.stateMachineFactory = stateMachineFactory;
@@ -25,7 +24,6 @@ public class DefaultBotService implements BotService {
     @Override
     public void handleUpdate(Du2UnikBot du2UnikBot, Update update) {
         final StateMachine<BotState, BotEvent> stateMachine = stateMachineFactory.getStateMachine();
-
         try {
             if (update.hasCallbackQuery()) {
                 final long userId = update.getCallbackQuery().getFrom().getId();

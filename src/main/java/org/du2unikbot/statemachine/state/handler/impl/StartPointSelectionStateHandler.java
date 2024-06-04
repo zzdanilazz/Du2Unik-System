@@ -56,7 +56,10 @@ public class StartPointSelectionStateHandler implements StateHandler {
     }
 
     @Override
-    public void handleMessage(Du2UnikBot du2UnikBot, Message message, StateMachineFactory<BotState, BotEvent> stateMachineFactory, StateMachinePersister<BotState, BotEvent, Long> persister) {
+    public void handleMessage(
+            Du2UnikBot du2UnikBot, Message message,
+            StateMachineFactory<BotState, BotEvent> stateMachineFactory,
+            StateMachinePersister<BotState, BotEvent, Long> persister) {
         this.du2UnikBot = du2UnikBot;
 
         try {

@@ -21,7 +21,11 @@ public class GreetingsStateHandler implements StateHandler {
     private Du2UnikBot du2UnikBot;
 
     @Override
-    public void handleMessage(Du2UnikBot du2UnikBot, Message message, StateMachineFactory<BotState, BotEvent> stateMachineFactory, StateMachinePersister<BotState, BotEvent, Long> persister) {
+    public void handleMessage(
+            Du2UnikBot du2UnikBot,
+            Message message, StateMachineFactory<BotState, BotEvent> stateMachineFactory,
+            StateMachinePersister<BotState, BotEvent, Long> persister
+    ) {
         this.du2UnikBot = du2UnikBot;
         final StateMachine<BotState, BotEvent> stateMachine = stateMachineFactory.getStateMachine();
 
@@ -51,6 +55,7 @@ public class GreetingsStateHandler implements StateHandler {
             e.printStackTrace();
         }
     }
+
 
     @Override
     public void handleCallbackQuery(Du2UnikBot du2UnikBot, CallbackQuery callbackQuery, StateMachineFactory<BotState, BotEvent> stateMachineFactory, StateMachinePersister<BotState, BotEvent, Long> persister) {

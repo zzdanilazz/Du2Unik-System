@@ -5,7 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.du2unikbot.config.BotProperties;
 import org.du2unikbot.repositories.TicketRepository;
 import org.du2unikbot.repositories.UserRepository;
-import org.du2unikbot.service.BotService;
+import org.du2unikbot.service.bot_service.BotService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;

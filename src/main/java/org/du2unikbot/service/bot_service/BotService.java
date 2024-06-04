@@ -1,4 +1,4 @@
-package org.du2unikbot.service;
+package org.du2unikbot.service.bot_service;
 
 import org.du2unikbot.web.bot.Du2UnikBot;
 import org.telegram.telegrambots.meta.api.objects.Update;
